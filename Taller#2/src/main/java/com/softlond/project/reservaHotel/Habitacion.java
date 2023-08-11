@@ -2,27 +2,47 @@ package main.java.com.softlond.project.reservaHotel;
 
 public class Habitacion {
     private int numero;
-    private String ocupante;
+    private double precio;
+    private boolean disponible;
+    private String cliente;
 
-    public Habitacion(int numero) {
+    public Habitacion(int numero, double precio) {
         this.numero = numero;
-        this.ocupante = "";
+        this.precio = precio;
+        this.disponible = true;
+        this.cliente = null;
     }
-
+       
     public int getNumero() {
         return numero;
     }
 
-    public String getOcupante() {
-        return ocupante;
+    public String getInformacion() {
+        return "Numero: " + numero + ", Precio: " + precio;
     }
 
-    public void ocupar(String ocupante) {
-        this.ocupante = ocupante;
+    public int getHabitacion(int numero) {
+        return numero;
     }
 
-    public void desocupar() {
-        this.ocupante = "";
+    public double getPrecio() {
+        return precio;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public String getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(String nombre) {
+        this.cliente = nombre;
+    }
+
+    public void setDisponible(boolean estado) {
+        this.disponible = estado;
     }
 }
 

@@ -3,9 +3,7 @@ import javax.swing.JOptionPane;
 import main.java.com.softlond.project.calculadora.Calculadora;
 import main.java.com.softlond.project.conversorMoneda.Conversor;
 import main.java.com.softlond.project.registroAlumnos.SistemaAlumno;
-import main.java.com.softlond.project.reservaHotel.Reserva;
-
-
+import main.java.com.softlond.project.reservaHotel.PanelReservas;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -31,8 +29,8 @@ public class App {
                 break;
             case 4:
                 JOptionPane.showMessageDialog(null, "Reserva Hotel:\n Bienvenido al sistema de reservas de hoteles.");
-                Reserva reserva = new Reserva();
-                reserva.run();
+                PanelReservas panelReservas = new PanelReservas();
+                panelReservas.run();
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Operación no válida.");
